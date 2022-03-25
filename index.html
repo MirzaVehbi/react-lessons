@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .grid * {
+        padding: 10px 15px;
+        background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        border: 1px solid #90B5CE;
+        text-align: center;
+        font-size: 22px;
+        font-family: sans-serif;
+        color: #427091
+    }
+
+    /* Setka */
+    .grid {
+        height: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas:
+            "header header"
+            "aside main"
+            "aside footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+</style>
+
+<body>
+    <div class="grid">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>
+            <ul>
+                <li>git clone 'pat to repository' - Klonirovat repozitoriy</li>
+                <li>git status - Status tekushego lokalnogo repozitoriya</li>
+                <li>git add 'path to file' - Dobavit noviy fayl pod kontrol GİTA</li>
+                <li>git commit -am "added new file index.html" - Dobavit noviye fayl na repozitoriy</li>
+            </ul>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
